@@ -221,13 +221,19 @@ const sendAmount = event => {
 
     const upDateArray = updateLoginArray.push(-transferAmount);
     // console.log(updateLoginArray);
+    let date = new Date().getDate() + '';
+    date = date.padStart(2, '0');
+    // console.log(typeof date);
+    let month = new Date().getMonth() + '';
+    month = month.padStart(2, '0');
+    let year = new Date().getFullYear();
 
     updateLoginArray.map((value, index) => {
       const type = value > 0 ? 'deposit' : 'withdrawal';
       // console.log(`Value at ${index} : ${value}`);
       const html = ` <div class="movements__row">
       <div class="movements__type movements__type--${type}">2 deposit</div>
-      <div class="movements__date">3 days ago</div>
+      <div class="movements__date">${date}/${month}/${year}</div>
       <div class="movements__value">${value}€</div>
     </div>`;
       containerMovements.insertAdjacentHTML('afterbegin', html);
