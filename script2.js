@@ -269,9 +269,10 @@ const calculateIn_out_interest = AccountLoggedIn => {
   // console.log(CalculateInterest);
 };
 
+let timer;
 const startLogoutTimer = function () {
-  let time = 600;
-  const timer = setInterval(function () {
+  let time = 20;
+  timer = setInterval(function () {
     const min = String(Math.trunc(time / 60)).padStart(2, 0);
     const sec = String(time % 60).padStart(2, 0);
     labelTimer.textContent = `${min}:${sec}`;
@@ -323,6 +324,7 @@ const displayMovements = AccountLoggedIn => {
   </div>`;
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
+  if (timer) clearInterval(timer);
   startLogoutTimer();
 };
 
