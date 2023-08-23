@@ -271,7 +271,7 @@ const calculateIn_out_interest = AccountLoggedIn => {
 
 let timer;
 const startLogoutTimer = function () {
-  let time = 20;
+  let time = 600;
   timer = setInterval(function () {
     const min = String(Math.trunc(time / 60)).padStart(2, 0);
     const sec = String(time % 60).padStart(2, 0);
