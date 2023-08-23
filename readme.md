@@ -1,10 +1,3 @@
-<style>
-  .user-info{
-    background-color:'blue';
-  }
-</style>
-
-
 
 <div class='user-info'>
   <h1>user: ali</h1>
