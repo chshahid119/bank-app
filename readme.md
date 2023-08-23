@@ -1,18 +1,4 @@
-
-<div class='user-info'>
-  <h1>user: ali</h1>
-<h3>pin: 1111</h1>
-</div>
-<div  class='user-info'>
-  <h1>user: jerry</h1>
-<h3>pin: 2222</h1>
-</div>
-<div  class='user-info'>
-  <h1>user: amna</h1>
-<h3>pin: 3333</h1>
-</div>
-<div  class='user-info'>
-  <h1>user: shahid</h1>
-<h3>pin: 4444</h1>
-</div>
-
+user: ali pin: 1111
+user: jerry pin: 2222
+user: amna pin: 3333
+user: shahid pin: 4444

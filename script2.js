@@ -375,24 +375,28 @@ const LoanApproved = e => {
       return cur;
     }
   });
-  if (+LoanAmount >= +maxNumber) {
-    // console.log(LogINAcc);
-    LogINAcc.movements.push(+LoanAmount);
-    const TotalAmount = LogINAcc.movements.reduce((acc, cur) => acc + cur);
-    labelBalance.innerText = TotalAmount.toFixed(3) + '€';
-    console.log(TotalAmount);
-    const Transactiondate = new Date().getDate();
-    const TransactionMonth = new Date().getMonth();
-    const TransactionYear = new Date().getFullYear();
-    const html = ` <div class="movements__row">
+
+  setTimeout(function () {
+    if (+LoanAmount >= +maxNumber) {
+      // console.log(LogINAcc);
+      LogINAcc.movements.push(+LoanAmount);
+      const TotalAmount = LogINAcc.movements.reduce((acc, cur) => acc + cur);
+      labelBalance.innerText = TotalAmount.toFixed(3) + '€';
+      console.log(TotalAmount);
+      const Transactiondate = new Date().getDate();
+      const TransactionMonth = new Date().getMonth();
+      const TransactionYear = new Date().getFullYear();
+      const html = ` <div class="movements__row">
     <div class="movements__type movements__type--deposit">2 deposit</div>
     <div class="movements__date">${Transactiondate}/${TransactionMonth}/${TransactionYear}</div>
     <div class="movements__value">${LoanAmount}€</div>
   </div>`;
-    containerMovements.insertAdjacentHTML('afterbegin', html);
-  } else {
-    alert('Your Amount is too much Less!');
-  }
+      containerMovements.insertAdjacentHTML('afterbegin', html);
+    } else {
+      alert('Your Amount is too much Less!');
+    }
+  }, 5000);
+
   // AmountsArray.some((mov)=>mov>)
 };
 
