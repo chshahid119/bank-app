@@ -1,1 +1,1 @@
-![Project Screenshot](./bankapp_site.png)
+![Project Screenshot](./bankist_site.png)
